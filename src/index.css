@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  background-color: #faf5f4;
+  color: #1b1b1b;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Aref Ruqaa', serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+body {
+  line-height: 1.6;
+}
+
+/* Focus visibility for keyboard users */
+:focus-visible {
+  outline: 2px solid #c9a66b;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Petal hairline */
+.hairline {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #c9a66b, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Thin scrollbar for horizontal chip rows */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
